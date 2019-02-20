@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gotham';   
+}
+
+#app {
+	display: flex;
+	flex-direction: row; justify-content: center; align-items: center;
+	width: 100vw; height: 100vh;
+	color: hsl(0, 0%, 100%);
+	background: hsl(200, 100%, 67%);
+}
+
+.left, .right {
+    display: flex;
+    height: 100%;
+    flex-direction: column; justify-content: center; align-items: start;
+    padding: 20px;
+}
+.left {
+    width: 30%;
+}
+.right {
+    width: 70%;
+    background: hsl(200, 100%, 33%);
+}
+
+.right h1 {
+    font-weight: 900;
+    font-size: 6rem;
+    line-height: 5rem;
+    margin-bottom: 40px;
+}
+
+button {
+    padding: 20px 30px;
+    margin-top: 40px;
+    background: hsl(200, 100%, 33%);
+    border: 0;
+    color: #FFF;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 1.2rem;
+    outline: none;
+}
+input, textarea {
+    padding: 8px 20px 8px 5px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    background: hsl(200, 100%, 92%);
+    box-shadow: none;
+}
