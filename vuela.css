@@ -21,10 +21,15 @@
 }
 .left {
     width: 30%;
+    overflow-y: scroll;
 }
 .right {
     width: 70%;
     background: hsl(200, 100%, 33%);
+}
+.right .img {
+  margin-bottom: 40px;
+
 }
 .right h1 {
     font-weight: 900;
@@ -34,46 +39,45 @@
     position: relative;
 }
 
-
-h1 span:nth-child(1) {
+.right h1 span:nth-child(1) {
     display: inline-block;
     position: relative;
-    animation: bounce 1s ease-in-out 0s both;
+    animation: bounce .5s ease-in-out 0s both;
 }
 
-h1 span:nth-child(2) {
+.right h1 span:nth-child(2) {
     display: inline-block;
     position: relative;
-    animation: bounce 1s ease-in-out .1s both;
+    animation: bounce .5s ease-in-out .1s both;
 }
 
 .right h1 span:nth-child(3) {
     display: inline-block;
     position: relative;
-    animation: bounce 1s ease-in-out .2s both;
+    animation: bounce .5s ease-in-out .2s both;
 }
 
 .right h1 span:nth-child(4) {
     display: inline-block;
     position: relative;
-    animation: bounce 1s ease-in-out .3s both;
+    animation: bounce .5s ease-in-out .3s both;
 }
 
 .right h1 span:nth-child(5) {
     display: inline-block;
     position: relative;
-    animation: bounce 1s ease-in-out .4s both;
+    animation: bounce .5s ease-in-out .4s both;
 }
 
 .right h1 span:nth-child(5) {
     display: inline-block;
     position: relative;
-    animation: bounce 1s ease-in-out .5s both;
+    animation: bounce .5s ease-in-out .5s both;
 }
 
 @keyframes bounce {
       0%  {top:0;}
-     50%  {top:-20px;}
+     50%  {top:-50px;}
     100%  {top: 0;}
 }
 
@@ -149,4 +153,32 @@ input[type=range]::-webkit-slider-runnable-track {
   cursor: pointer;
   background: hsl(200, 100%, 92%);
   border-radius: 3px;
+}
+
+.bubbles {
+  display: flex;
+  flex-flow: row wrap; 
+  justify-content: space-between; 
+  align-items: center;
+  width: 100%;
+  
+}
+
+.pill {
+  background: hsl(200, 100%, 92%);
+  padding: 5px 18px 5px 3px;
+  margin: 10px 0;
+  border-radius: 20px;
+  color: hsl(200, 100%, 33%);
+  display: inline-block;
+  
+
+}
+.pill i {
+  font-style: normal;
+  padding: 2px 6px 2px 5px;
+  margin-right: 10px;
+  background: hsl(200, 100%, 33%);
+  color: white;
+  border-radius: 20px;
 }
