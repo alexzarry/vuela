@@ -7,11 +7,24 @@
     <title>vuela</title>
     <link rel="stylesheet" type="text/css" href="./vuela.css">
     <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/vue/latest/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+
 </head>
 <body>
     <div id="app">
         <div class="left">
+            <label for="w">width</label>
+            <input type="range" min="0" max="1000" value="550" v-model="bgWidth">
+            <label for="h">height</label>
+            <input type="range" min="0" max="1000" value="300" v-model="bgHeight">
+            <label for="px">posX</label>
+            <input type="range" min="-1000" max="1000" value="0" v-model="bgPosX">
+            <label for="py">posY</label>
+            <input type="range" min="-1000" max="1000" value="0" v-model="bgPosY">
+            <label for="sc">scale</label>
+            <input type="range" min="100" max="1000" value="0" v-model="bgScale">
+
             <label for="h1">h1</label>
             <input type="text" name="h1" v-model="h1">
             <label for="fs">font-size</label>
@@ -23,9 +36,16 @@
             <textarea type="text" name="p" v-model="p"></textarea>
             
             <button @click="replaceText()">SAVE & UPDATE</button>
-            <button @click="splitHead()">SPLIT & BOUNCE</button>
+            <button @click="splitHead()">WOO! {{ nameInitial }}</button>
+            
+            <my-comp></my-comp>
         </div>
         <div class="right">
+            <div class="img" v-bind:style="{
+                background: bgStart + bgURL + bgEnd + ' ' + bgRepeat + ' ' + bgPosX + 'px ' + bgPosY + 'px/' + bgScale + '%', 
+                width: bgWidth + 'px', 
+                height: bgHeight + 'px'
+            }"></div>
             <h1 id="header" v-bind:style="{ fontSize: fontSize + 'rem', lineHeight: lineHeight + 'rem' }">{{ heading }}</h1>
             <p>Font is: {{ fontSize }} rem</p>
             <p>Spacing is: {{ lineHeight }} rem</p>
